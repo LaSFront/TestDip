@@ -1,4 +1,6 @@
-[](https://ci.appveyor.com/api/projects/status/7iiht3tnp8vg05l0/branch/main?svg=true)
+[![Build status](https://ci.appveyor.com/api/projects/status/7iiht3tnp8vg05l0?svg=true)](https://ci.appveyor.com/project/LaSFront/testdip)
+
+
 
 
 
