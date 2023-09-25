@@ -26,7 +26,7 @@ test_script:
 build_script: 
   - sleep 10
   - sudo chmod +x ./gradlew
-  - ./gradlew test -Dselenide.headless=true -Ddb.url=jdbc:mysql://localhost:3306/appDurlbd=jdbc:mysql://localhost:3306/app
+  - ./gradlew test -Dselenide.headless=true -Ddb.url=jdbc:mysql://localhost:3306/app
 
       
 
