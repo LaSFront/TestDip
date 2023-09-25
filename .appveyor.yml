@@ -22,13 +22,18 @@ for:
       - sudo curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
       - sudo chmod +x /usr/local/bin/docker-compose
       - sudo docker-compose up -d
-      - sleep 20
+      - sleep 15
       - java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar &
-      - sleep 20
+      - sleep 15
+
+    test_script:
+      - sudo chmod +x gradlew
+      - ./gradlew test --info “-Dselenide.headless=true”
 
     build_script:
       - chmod +x gradlew
-      - ./gradlew test --info -Dselenide.headless=true -DdbUrl=jdbc:mysql://localhost:3306/app
+      - ./gradlew test -Dselenide.headless=true -Durlbd=jdbc:mysql://localhost:3306/app
       - sudo docker-compose down
+      
 
  
